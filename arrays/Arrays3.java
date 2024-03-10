@@ -12,13 +12,58 @@ public class Arrays3{
         a.set(0, temp);
     }
 
-    static void rotateArrayLeft(Vector<Integer> a){
+    // static void swap2(int []a , int i , int j){
+    //     int temp = a[i];
+    //     a[i] = a[j]; 
+    //     a[j] = temp;
+    // }
+    // //Function to rotate an array by d elements in counter-clockwise direction. 
+    // static void rotateArr(int a[], int d , int n)
+    // {
+    //     for(int i = n-1 ; i>=0; i--){
+    //         if(i-d<0){
+    //             int newIndex = i-d + n;
+    //             swap2(a , i , newIndex);
+    //         }
+    //         else{
+    //             swap2(a , i , i-d);
+    //         }
+    //     }
+    // }
+
+    // <----------This is the main part which is wrong---------------->
+    // int n = 5;
+    //     int aN[] = new int[n];
+    //     for(int i = 0; i<n; i++){
+    //         aN[i] = i+1;
+    //     }
+    //     System.out.println("Original Array:");
+    //     for(int x: aN) 
+    //     rotateArr(aN , 3 , n);
+    //     System.out.println("\nLeft rotated Array:");
+    //     for(int x: aN)
+    //     System.out.print(x + " ");
+    // <----------This is the main part which is wrong---------------->
+
+    static void rotateArrayLeft(Vector<Integer> a ){
         
         int temp = a.get(0);
         for(int i = 0; i<a.size()-1; i++){
             a.set(i , a.get(i+1));
         }
         a.set(a.size()-1 , temp);
+    }
+
+    static void NrotateArrayLeft(Vector<Integer> a , int n){
+        
+        while(n>0){
+            int temp = a.get(0);
+        for(int i = 0; i<a.size()-1; i++){
+            a.set(i , a.get(i+1));
+        }
+        a.set(a.size()-1 , temp);
+         n--;
+        }
     }
     static void swap(int[][] a , int i , int j)
     {
@@ -81,7 +126,18 @@ public class Arrays3{
         // System.out.println("Left rotated Array:");
         // rotateArrayLeft(a);
         // System.out.println(a);
-// <----------------------------Right rotation by 1 element in Arrays---------------------------->
+// <----------------------------Left Rotation by n element in Arrays---------------------------->
+        //  Vector<Integer> aN = new Vector<>(5);
+        // for(int i = 0; i<aN.capacity(); i++){
+        //     aN.add(i+1);
+        // }
+        // System.out.println("Original Array:");
+        // System.out.println(aN);
+        // System.out.println("Left rotated Array:");
+        // NrotateArrayLeft(aN , 3);
+        // System.out.println(aN);
+// <----------------------------Left Rotation by n element in Arrays---------------------------->
+        
         //  Vector<Integer> a = new Vector<>(5);
         // for(int i = 0; i<a.capacity(); i++){
         //     a.add(i+1);
