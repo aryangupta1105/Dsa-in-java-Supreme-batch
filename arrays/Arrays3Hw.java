@@ -295,6 +295,10 @@ for (int x : c)
             System.out.print(i+" ");
         }
     }
+
+    static void CommonElement3ArraysM2(int [] a , int []b , int c[]){
+        
+    }
     public static void main(String args[]){
 // <-----------------------SORTING NEGATIVE ELEMENTS TO LEFT------------------->
         // int arr[] = {-1 , 3, -2 , -1, -4, -32 , 42 , 43, 5, 2};
@@ -307,8 +311,8 @@ for (int x : c)
 // <-----------------------SORTING NEGATIVE ELEMENTS TO LEFT------------------->
         // sortNegativetoLeftM2(arr);
         // System.out.println();
-// 
-// 
+
+
 
 // <-----------------------SORTING 0S 1S AND 2S ELEMENTS ------------------->
 
@@ -387,11 +391,11 @@ for (int x : c)
 
 
 // <---------------------FINDING COMMON ELEMENT IN THREE ARRAYS ------------------->
-    //     int a[] = {1,2 ,3,5,6,7};
-    //     int b[] = {2,4,6,8,10};
-    //     int c[] = {11,2,3,4,6};
-    //    CommonElement3Arrays(a,b,c);
-
+        int a[] = {1,2 ,3,5,6,7};
+        int b[] = {2,4,6,8,10};
+        int c[] = {11,2,3,4,6};
+       CommonElement3Arrays(a,b,c);
+ 
 
 
     }
