@@ -307,7 +307,8 @@ for (int x : c)
 // <-----------------------SORTING NEGATIVE ELEMENTS TO LEFT------------------->
         // sortNegativetoLeftM2(arr);
         // System.out.println();
-
+// 
+// 
 
 // <-----------------------SORTING 0S 1S AND 2S ELEMENTS ------------------->
 
@@ -384,7 +385,7 @@ for (int x : c)
     //     int c[] = {11,2,3,4,6};
     //    CommonElement3Arrays(a,b,c);
 
-    
+
 // <---------------------FINDING COMMON ELEMENT IN THREE ARRAYS ------------------->
     //     int a[] = {1,2 ,3,5,6,7};
     //     int b[] = {2,4,6,8,10};
