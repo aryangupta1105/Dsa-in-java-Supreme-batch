@@ -296,9 +296,34 @@ for (int x : c)
         }
     }
 
-    static void CommonElement3ArraysM2(int [] a , int []b , int c[]){
-        
+
+//  only for sorted arrays:
+    static Vector<Integer> CommonElement3ArraysM2(int[] a, int[] b, int[] c){
+        int i = 0;
+        int j= 0; int k = 0;
+        Vector<Integer> ans = new Vector<>();
+        System.out.print(a.length + " " + b.length + " " + c.length);
+       while (i < a.length && j < b.length && k < c.length)
+        {
+            if(a[i] == b[j] && b[j] == c[k])
+            {
+                ans.add(a[i]);
+                i++; k++; j++;
+            }
+            else if(a[i] < b[j]){
+                i++;
+            }
+            else if(b[j] < c[k]){
+                j++;
+            }
+            else {
+                k++;
+            }
+        }
+            return ans;
     }
+
+
     public static void main(String args[]){
 // <-----------------------SORTING NEGATIVE ELEMENTS TO LEFT------------------->
         // int arr[] = {-1 , 3, -2 , -1, -4, -32 , 42 , 43, 5, 2};
@@ -391,11 +416,21 @@ for (int x : c)
 
 
 // <---------------------FINDING COMMON ELEMENT IN THREE ARRAYS ------------------->
+    //     int a[] = {1,2 ,3,5,6,7};
+    //     int b[] = {2,4,6,8,10};
+    //     int c[] = {11,2,3,4,6};
+    //    CommonElement3Arrays(a,b,c);
+
+
+
+// <---------------------FINDING COMMON ELEMENT IN THREE ARRAYS ------------------->
+        
         int a[] = {1,2 ,3,5,6,7};
         int b[] = {2,4,6,8,10};
-        int c[] = {11,2,3,4,6};
-       CommonElement3Arrays(a,b,c);
- 
+        int c[] = {2 ,3,4 ,6 , 10};
+        
+        Vector<Integer> result = CommonElement3ArraysM2(a, b, c);
+        System.out.println(result);
 
 
     }
