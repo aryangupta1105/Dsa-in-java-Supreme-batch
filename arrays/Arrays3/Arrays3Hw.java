@@ -299,17 +299,20 @@ for (int x : c)
 
 //  only for sorted arrays:
 
-    static Vector<Integer> CommonElement3ArraysM2(int[] a, int[] b, int[] c){
+    static Set<Integer> CommonElement3ArraysM2(int[] a, int[] b, int[] c){
         int i = 0;
         int j= 0; int k = 0;
-        Vector<Integer> ans = new Vector<>();
+        Set<Integer> st =  new HashSet<>();
+        // Vector<Integer> ans = new Vector<>();
         System.out.print(a.length + " " + b.length + " " + c.length);
        while (i < a.length && j < b.length && k < c.length)
         {
             if(a[i] == b[j] && b[j] == c[k])
             {
-                if(!ans.contains(a[i]))
-                ans.add(a[i]);
+                // if(!ans.contains(a[i]))
+                // or use set
+                st.add(a[i]);
+                // ans.add(a[i]);
                 i++; k++; j++;
             }
             else if(a[i] < b[j]){
@@ -322,9 +325,25 @@ for (int x : c)
                 k++;
             }
         }
-            return ans;
+            return st;
     }
 
+
+//  removing duplicates from an array:
+    static void removeDuplicates(int [] arr){
+        // int dup = a[0];
+        int start = 0;
+        int i = 0;
+        while(i>start){
+            for( i = start+1; i<arr.length; i++){
+                if(arr[i] == arr[start])
+                {
+                    arr[i] = -1;
+                }
+            }
+        }
+        for(int x: arr) System.out.print(" " + x);
+    }
 
     public static void main(String args[]){
 // <-----------------------SORTING NEGATIVE ELEMENTS TO LEFT------------------->
@@ -427,13 +446,21 @@ for (int x : c)
 
 // <---------------------FINDING COMMON ELEMENT IN THREE ARRAYS ------------------->
         
-        int a[] = {1,2 ,3,5,6,6};
-        int b[] = {2,4,6,6,10};
-        int c[] = {2 ,3,4 ,6 , 6};
+        // int a[] = {1,2 ,3,5,6,6};
+        // int b[] = {2,4,6,6,10};
+        // int c[] = {2 ,3,4 ,6 , 6};
+        int a[] = {6,6,6};
+        int b[] = {6,6,6};
+        int c[] = {6, 6 , 6};
         
-        Vector<Integer> result = CommonElement3ArraysM2(a, b, c);
-        System.out.println(result);
+        // Vector<Integer> result = CommonElement3ArraysM2(a, b, c);
+        // System.out.println(result);
+        // Note:= In set we doesn't need to check the duplicates, It by itself doesn't include duplicates....
 
+        Set<Integer> result = CommonElement3ArraysM2(a, b, c);
+        System.out.println("\n" + result);
+
+        removeDuplicates(a);
 
     }
 }
