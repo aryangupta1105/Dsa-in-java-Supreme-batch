@@ -24,6 +24,7 @@ public class FindingDuplicateElement{
         }
         return -1;
     }
+    
 
     static int negativeMarkingduplicate(int [] arr){
         int ans = -1;
@@ -46,7 +47,6 @@ public class FindingDuplicateElement{
         return arr[0];
     }
 
-    
 
 
     public static void main(String args[]){
@@ -61,9 +61,11 @@ public class FindingDuplicateElement{
         System.out.println(dup3);
 
 // <---------------------FINDING DUPLICATE NUMBER USING POSITIONING------------------->
+        
         int ar[] = {1, 2,3, 4, 6, 4, 5,  8 , 9, 7};
         int dup4=  PositioningDuplicate(ar);
-        System.out.println(dup4);
+        System.out.println(dup4S);
+        for(int x: ar) System.out.print(x + " ");
 
 
     }

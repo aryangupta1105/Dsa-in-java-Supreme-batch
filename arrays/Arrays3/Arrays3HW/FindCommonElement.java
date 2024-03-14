@@ -74,22 +74,31 @@ public class FindCommonElement{
             return st;
     }
 
+
     //  removing duplicates from an array:
-    static void removeDuplicates(int [] arr){
-        // int dup = a[0];
-        int start = 0;
-        int i = 0;
-        while(i>start){
-            for( i = start+1; i<arr.length; i++){
-                if(arr[i] == arr[start])
-                {
-                    arr[i] = -1;
-                }
+    static int RemovingUsingHASHduplicateNum(int [] arr){
+        int max = 0;
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i]>=max) max = arr[i];
+        }
+        int c[] = new int[max+1];
+        for(int i = 0; i<c.length; i++){
+            c[arr[i]]++;
+        }
+        int dup = -1;
+        for(int i = 0; i<c.length; i++){
+            if(c[i]>1) {
+               dup = i;
             }
         }
-        for(int x: arr) System.out.print(" " + x);
+        for(int i = 0; i<arr.length ; i++){
+            if(arr[i] == dup){ 
+                arr[i] = -1;
+            }
+        }
+        for(int x: arr) System.out.print(x + " ");
+        return dup;
     }
-
 
     
     public static void main(String args[]){
