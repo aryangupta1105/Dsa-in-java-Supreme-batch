@@ -16,26 +16,26 @@ public class spiralPrintmatrix{
 
         int count = 0;
         while(count < total_elements){
-            for(int i = startCol; i<endCol; i++){
+            for(int i = startCol; i<=endCol && count<total_elements; i++){
                 ans.add(arr[startRow][i]);
                 count++;
                 System.out.print(arr[startRow][i] + " ");
             }
             startRow++;
-            for(int i = startRow; i<endRow; i++)
+            for(int i = startRow; i<=endRow && count<total_elements; i++)
             {
                 ans.add(arr[i][endCol]);
                 count++;
                 System.out.print(arr[i][endCol] + " ");
             }
             endCol--;
-            for(int i = endCol; i>=startCol; i--){
+            for(int i = endCol; i>=startCol && count<total_elements; i--){
                 ans.add(arr[endRow][i]);
                 count++;
                 System.out.print(arr[endRow][i] + " ");
             }
             endRow--;
-            for(int i = endRow; i>=startRow; i--){
+            for(int i = endRow; i>=startRow && count<total_elements; i--){
                 ans.add(arr[i][startCol]);
                 count++;
                 System.out.print(arr[i][startCol]+ " ");
@@ -43,5 +43,6 @@ public class spiralPrintmatrix{
             startCol++;
         }
     
+        // System.out.println(ans);
     }
 }
