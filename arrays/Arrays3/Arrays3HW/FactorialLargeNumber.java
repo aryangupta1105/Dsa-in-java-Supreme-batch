@@ -41,10 +41,41 @@ public class FactorialLargeNumber{
         String result = answer.toString();
         return result;
     }
+
+    static String LargeFactorial(int n ){
+        
+        Vector<Integer> ans = new Vector<>();
+        ans.add(1);
+        int carry = 0;
+        for(int i = 2; i<=n; i++){
+           for(int j = 0; j<ans.size(); j++) {
+                int x = ans.get(j) * i + carry;
+                ans.set(j , x%10);
+                carry = x / 10;
+           }
+           while(carry != 0){
+            ans.add(carry%10);
+            carry /= 10;
+           }
+           carry = 0;
+        }
+        Vector<Integer> result = new Vector<>();
+        StringBuilder answer = new StringBuilder();
+        for(int k = ans.size()-1; k>=0; k--){
+            result.add(ans.get(k));
+            answer.append(ans.get(k));
+        }
+        String result1 = answer.toString();
+        return result1;
+    }
     public static void main(String args[]){
-        int a[] = {1 , 2, 5 , 5 , 2};
-        int b[] = {2 , 5, 3 ,2 ,1 ,2};
-        String result = addTwoArrays(a, b, a.length , b.length);
-        System.out.print(result);
+    // <--------------------ADDITION OF TWO ARRAYS ----------------------->
+        // int a[] = {1 , 2, 5 , 5 , 2};
+        // int b[] = {2 , 5, 3 ,2 ,1 ,2};
+        // String result = addTwoArrays(a, b, a.length , b.length);
+        // System.out.print(result);
+
+    // <--------------------FACTORIAL OF ANY LARGE NUMBER----------------------->
+        System.out.print(LargeFactorial(50));
     }
 }
