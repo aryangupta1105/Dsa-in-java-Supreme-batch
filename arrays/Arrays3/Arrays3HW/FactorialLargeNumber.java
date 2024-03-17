@@ -76,6 +76,6 @@ public class FactorialLargeNumber{
         // System.out.print(result);
 
     // <--------------------FACTORIAL OF ANY LARGE NUMBER----------------------->
-        System.out.print(LargeFactorial(50));
+        System.out.print(LargeFactorial(999));
     }
 }
