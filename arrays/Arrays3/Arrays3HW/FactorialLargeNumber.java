@@ -68,14 +68,19 @@ public class FactorialLargeNumber{
         String result1 = answer.toString();
         return result1;
     }
+  
+    
     public static void main(String args[]){
     // <--------------------ADDITION OF TWO ARRAYS ----------------------->
         // int a[] = {1 , 2, 5 , 5 , 2};
-        // int b[] = {2 , 5, 3 ,2 ,1 ,2};
+        // int b[] = {1};
         // String result = addTwoArrays(a, b, a.length , b.length);
         // System.out.print(result);
 
     // <--------------------FACTORIAL OF ANY LARGE NUMBER----------------------->
-        System.out.print(LargeFactorial(999));
+        // System.out.print(LargeFactorial(999));
+
+
+
     }
 }
