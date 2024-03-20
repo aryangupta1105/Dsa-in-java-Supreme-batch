@@ -18,7 +18,7 @@ public class searching{
                 end = mid-1;
             }
         }
-        return -1;
+        return -1; 
     }
     static int firstOccurenceBSearch(int arr[] , int target){
         int start = 0; 
