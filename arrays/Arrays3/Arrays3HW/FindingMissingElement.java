@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 
 public class FindingMissingElement{
@@ -59,7 +59,7 @@ public class FindingMissingElement{
 
 // <---------------------FINDING MISSING NUMBER USING SORT AND SWAP------------------->
         int A[] = {1,2,4,4,4};
-       swapNsortMissing("The missing elements are : " + A);
+       swapNsortMissing(A);
 
     }
 }

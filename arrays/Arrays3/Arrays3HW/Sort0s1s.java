@@ -1,8 +1,11 @@
-import java.lang.*;
-import java.util.*;
 
-public class sort0s1s{
-    
+
+public class Sort0s1s{
+    static void swap(int [] a ,int i ,int j){
+        int temp = a[i];
+        a[i]= a[j];
+        a[j] = temp;
+    }
     // abdul bari algo: 
     static void sort0s1s(int [] arr){
         int i = 0; 

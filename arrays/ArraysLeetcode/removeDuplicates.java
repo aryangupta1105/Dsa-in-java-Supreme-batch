@@ -1,7 +1,7 @@
-import java.lang.*;
+
 import java.util.*;
 
-public class removeDuplicates{
+public class RemoveDuplicates{
       static int[] removeDuplicates(int[] nums) {
         int max = Integer.MIN_VALUE;
     for (int num : nums) {

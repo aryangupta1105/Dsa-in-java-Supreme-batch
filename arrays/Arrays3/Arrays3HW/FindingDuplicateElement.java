@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 
 public class FindingDuplicateElement{
@@ -64,7 +64,7 @@ public class FindingDuplicateElement{
         
         int ar[] = {1, 2,3, 4, 6, 4, 5,  8 , 9, 7};
         int dup4=  PositioningDuplicate(ar);
-        System.out.println(dup4S);
+        System.out.println(dup4);
         for(int x: ar) System.out.print(x + " ");
 
 

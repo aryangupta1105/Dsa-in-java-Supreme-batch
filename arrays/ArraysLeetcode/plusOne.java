@@ -1,7 +1,6 @@
-import java.lang.*;
-import java.util.*;
 
-public class plusOne{
+
+public class PlusOne{
     
     static int[] plusOne(int arr[]){
         int i = arr.length - 1;

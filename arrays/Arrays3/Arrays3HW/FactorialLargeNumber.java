@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 
 public class FactorialLargeNumber{
@@ -6,7 +6,6 @@ public class FactorialLargeNumber{
         int i = m-1;
         int j = n-1;
         int carry = 0;
-        StringBuilder answ = new StringBuilder();
         Vector<Integer> ans = new Vector<>();
         int x = 0;
         while(i>=0 && j>=0){

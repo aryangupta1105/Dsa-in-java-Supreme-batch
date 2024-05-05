@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 
 public class FindCommonElement{
@@ -134,6 +134,5 @@ public class FindCommonElement{
         Set<Integer> result = CommonElement3ArraysM2(a, b, c);
         System.out.println("\n" + result);
 
-        removeDuplicates(a);
     }
 }

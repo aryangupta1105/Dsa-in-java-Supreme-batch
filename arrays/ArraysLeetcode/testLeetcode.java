@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 public class testLeetcode {
     static int removeElement(int[] nums, int val) {
